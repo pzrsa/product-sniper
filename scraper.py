@@ -49,4 +49,5 @@ def send_mail():
     
     server.quit()
 
-check_availability()
+while True:
+    check_availability()
