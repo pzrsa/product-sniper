@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import smtplib
+import smtplib, time
 from login import email, password, email2
 
 URL = 'https://www.amazon.co.uk/PlayStation-9395003-5-Console/dp/B08H95Y452/ref=sr_1_1?dchild=1&keywords=ps5&qid=1615488436&sr=8-1'
@@ -51,3 +51,4 @@ def send_mail():
 
 while True:
     check_availability()
+    time.sleep(60)
