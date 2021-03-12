@@ -18,11 +18,10 @@ def check_availability():
     TITLE = soup.find(id="productTitle").get_text()
     AVAILABILITY = soup.find(id="availability").get_text()
 
-    print(AVAILABILITY.strip())
-    print(TITLE.strip())
-
     if 'unavailable' not in AVAILABILITY:
         send_mail()
+    else:
+        print(f"{TITLE.strip()} is out of stock.")
 
 
 def send_mail():
