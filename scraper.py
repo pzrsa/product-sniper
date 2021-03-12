@@ -31,7 +31,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login(email, password)
+    server.login(from_email, password)
 
     subject = "Item is back in stock!"
     body = "Check the Amazon link:\n\nhttps://www.amazon.co.uk/PlayStation-9395003-5-Console/dp/B08H95Y452/ref=sr_1_1?dchild=1&keywords=ps5&qid=1615488734&sr=8-1"
