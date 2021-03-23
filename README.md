@@ -34,8 +34,6 @@ There are two ways for using the password, one way is without 2FA and one is wit
 
 For the password, you would need to know if you 2FA enabled on your email account.
 
-If you're not sure how, Google 'how to enable EMAIL PROVIDER 2 factor authentication'
-
 For Gmail users:
 
 1. Open your Google account.
