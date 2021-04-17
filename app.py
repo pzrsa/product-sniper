@@ -3,10 +3,6 @@ from bs4 import BeautifulSoup
 import smtplib, time
 from login import from_email, to_email, password
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36'
-}
-
 
 def check_availability(url, headers):
     page = requests.get(url, headers=headers)
