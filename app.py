@@ -3,15 +3,13 @@ from bs4 import BeautifulSoup
 import smtplib, time
 from login import from_email, to_email, password
 
-URL = 'https://www.amazon.co.uk/PlayStation-9395003-5-Console/dp/B08H95Y452/ref=sr_1_1?dchild=1&keywords=ps5&qid=1615488436&sr=8-1'
-
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36'
 }
 
 
-def check_availability():
-    page = requests.get(URL, headers=headers)
+def check_availability(url, headers):
+    page = requests.get(url, headers=headers)
 
     soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -49,5 +47,6 @@ def send_mail():
     server.quit()
 
 while True:
-    check_availability()
+    check_availability('https://www.amazon.co.uk/PlayStation-9395003-5-Console/dp/B08H95Y452/ref=sr_1_1?dchild=1&keywords=ps5&qid=1615488436&sr=8-1', 
+                        {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36'})
     time.sleep(60)
