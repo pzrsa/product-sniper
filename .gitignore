@@ -2,3 +2,4 @@ venv
 login.py
 __pycache__
 .DS_Store
+.vscode
