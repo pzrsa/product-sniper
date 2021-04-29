@@ -15,7 +15,7 @@ In order to use this application, you will need to install two Python libraries:
 
 To install them, do a simple `pip3 install bs4 requests` in your terminal.
 
-Alternatively, you can do a `pip3 install -r requirements.txt`. This will install everything directly from that .txt file.
+Alternatively, you can do a `pip3 install -r requirements.txt`. This will install everything directly from that file.
 
 Thats it!
 
