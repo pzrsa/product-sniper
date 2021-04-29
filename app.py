@@ -14,7 +14,7 @@ def check_availability(url, headers):
     TITLE = soup.find(id="productTitle").get_text()
     AVAILABILITY = soup.find(id="availability").get_text()
 
-    if 'unavailable' in AVAILABILITY:
+    if 'unavailable' not in AVAILABILITY:
         send_mail()
     else:
         print(f"{TITLE.strip()} is out of stock.")
