@@ -2,54 +2,31 @@
 
 The Product Sniper is a neat application that allows you to check if an item on a webpage is available!
 
-This project is a work in progress, so please feel free to request any features or bug fixes.
+Pretty much just tracks a webpage element with a way to indicate the products availability.
 
-## Documentation
+Demonstration can be shown [here](https://youtu.be/mdhT49qm3yI).
 
-### Prerequisites
+The documentation is mostly aimed at developers, but feel free to follow along!
 
-In order to use this application, you will need to install two Python libraries:
+## Setup
 
-1. [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - for pulling data out of HTML websites. 
-2. [Requests](https://requests.readthedocs.io/en/master/) - allows you to send HTTP requests easily.
+1. Click [here](https://github.com/pzrsa/product-sniper/fork) to fork this repo.
+2. Clone your forked repo
+```
+# Replace `YOUR_GITHUB_USERNAME` with your own github username
+git clone https://github.com/YOUR_GITHUB_USERNAME/product-sniper.git product-sniper
+cd product-sniper
 
-To install them, do a simple `pip3 install bs4 requests` in your terminal.
+# Create a virtual environment and activate it
+python3 -m venv .venv
+source .venv/bin/activate
 
-Alternatively, you can do a `pip3 install -r requirements.txt`. This will install everything directly from that file.
+# Install dependencies
+pip install -r requirements.txt
+```
+3. To get updates via email you need to setup an app password for Gmail, this can be done through [here](https://support.google.com/accounts/answer/185833/sign-in-with-app-passwords).
+4. Replace the `from_email` and `from_email_password` with the details for the email that will be used to send updates. For the `to_email` you can put in the same one used when sending messages.
+5. The current link its tracking is a PS5 on Amazon UK, however you can change it and track a different item. Keep in mind you do need to change what page element it should track through its id or class. If you know how CSS works then this should be easy for you to complete.
+6. Run the application and if any errors pop up, feel free to open an issue and I'll be happy to help.
 
-Thats it!
-
-(If you come across any issues, please refer to their documentation or request an issue in the repo).
-
-### Installation
-Clone the repository using git onto your computer.
-
-![image](https://user-images.githubusercontent.com/76453314/111336206-eca8af80-866c-11eb-831b-04a9631ec62b.png)
-
-OPTIONAL: Create a new file in that same directory and name it 'login.py'. This is where you will store your for_email, to_email and password.
-
-If you aren't going to be sharing your script, then simply replace the two from_email with an email you want to receive from, replace the to_email with an email you want to send to (you can use the same email as the from one).
-
-There are two ways for using the password, one way is without 2FA and one is with 2FA. In this I'm going to be using 2FA with Gmail.
-
-For the password, you would need to know if you 2FA enabled on your email account.
-
-For Gmail users:
-
-1. Open your Google account.
-2. In the left side panel, select Security.
-3. Under “Signing in to Google,” select 2-Step Verification and then Get started.
-4. Follow the on-screen steps.
-
-After you know its enabled, create an app password which will grant access to the application to send an email without having to provide too much information.
-
-For Gmail users:
-
-1. Open your Google account.
-2. In the left side panel, select Security.
-3. Under “Signing in to Google,” select App Passwords.
-4. Click on "Select app" and choose 'Mail'.
-5. Select your device (usually Mac or Windows Computer).
-6. Copy the password it provides and make sure not to lose it, you can't click on it to retrieve. If you somehow lose it, just delete the app password and create another one.
-
-Now you're pretty much done! Just put the password into where it says password, and get rid of the `from login import from_email, to_email, password` if you put your details right into the script instead of a separate file.
+I hope it helps you just track pretty much anything on a page!
